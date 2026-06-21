@@ -15,6 +15,7 @@ using namespace std;
     string opcion4;
     float puntos;//valor de puntos de cada opcion
     int correcta;//la respuseta correcta 
+    int respuesta;
     int puntaje;//se explica solita
     pregunta *sig;//pregutna sig
     pregunta *ant;//pregunta anterior 
@@ -162,9 +163,27 @@ void guardar(pregunta *inicio){
     }
     arch.close();
 }
+void aplicarExam(pregunta *inicio){
+    pregunta *actual=inicio;
+    int opc;
+    bool terminar=false;
+    while(!terminar){
+        system("cls");
+        cout<<"Pregunta:\n";
+        cout<<actual->cuestion<<endl;
+        cout<<"1) "<<actual->opcion1<<endl;
+        cout<<"2) "<<actual->opcion2<<endl;
+        cout<<"3) "<<actual->opcion3<<endl;
+        cout<<"4) "<<actual->opcion4<<endl;
+        cout<<"Respuesta actual: "<<actual->respuesta;
+        
+    }
+}
 int main() {
 system("color 05");//color morado en la consola de windows eso
     bool salir = false;//flag que se activara con la opcionde salir para romper ciclo
+    pregunta *inicio=NULL;
+    pregunta *actual =NULL; 
     while (!salir) {//ciclod e el menu
         int opcion = menu();//obtiene el valor de la opcion ose ael seleccion de arriba
         system("cls");//limpia la pantalla
@@ -177,7 +196,16 @@ system("color 05");//color morado en la consola de windows eso
                 cout << "seleccionaste modificar exam";
                 break;
             case 2://lo mismo en generar
-                cout << "seleccionaste generar examen";
+                cout << "seleccionaste generar examen\n";
+                creararchivo(inicio,actual);
+                actual=inicio;
+                if(actual!=NULL){
+                    generarExam(actual);
+                    guardar(inicio);
+                }
+                else{
+                    cout<<"No hay preguntas en el examen";
+                }
                 break;
             case 3://salida de el programa
                 salir = true;
