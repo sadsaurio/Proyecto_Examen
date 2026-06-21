@@ -6,6 +6,20 @@
 
 using namespace std;
 
+ struct pregunta{
+    string  cuestion;//pregunta pero ps para no repetir con el nombre de la estructura
+    string opcion1;//opcoones
+    string opcion2;
+    string opcion3;
+    string opcion4;
+    float puntos;//valor de puntos de cada opcion
+    int correcta;//la respuseta correcta 
+    int puntaje;//se explica solita
+    pregunta *sig;//pregutna sig
+    pregunta *ant;//pregunta anterior 
+ };
+
+
 void gotoxy(int x, int y)//funcion para mover el cursor y dibujarlo existe en algunas librerias pero mejor la declare
 {   COORD coord;
     coord.X = x;
