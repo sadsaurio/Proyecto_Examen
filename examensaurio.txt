@@ -1,0 +1,7 @@
+:p;who is the best?
+:op1;spinosaurus
+:op2;acrocantosaurus
+:op3;parasaurolofus
+:op4;carnotaurus
+:r;op1
+10.
