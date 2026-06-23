@@ -44,7 +44,7 @@ system("color 05");//hace que el texto de la consola sea mrado
     while (true) {
         system("cls");//limpia la pantalla
         gotoxy(30, 5);
-        cout << "=== Menu de agott ===";
+        cout << "=== GENERADOR DE EXAMENES ===";
         for (int i = 0; i < 4; i++) {   
             gotoxy(30, 8 + i);//imprimir con un renglon
             if (i == seleccion){
