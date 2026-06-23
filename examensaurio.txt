@@ -2,6 +2,27 @@
 :op1;spinosaurus
 :op2;acrocantosaurus
 :op3;parasaurolofus
-:op4;carnotaurus
+:op4;dimetrodon
 :r;op1
-10.
+20.
+:p;what period is the best?
+:op1;jurrasic
+:op2;triassic
+:op3;cretacic
+:op4;all
+:r;op1
+5.
+:p;nc
+:op1;1
+:op2;2
+:op3;3
+:op4;4
+:r;op2
+1.
+:p;donde cayo el meteorito?
+:op1;mexico yucatan
+:op2;everest
+:op3;pozo de las marianas
+:op4;teocaltiche
+:r;op1
+12.
