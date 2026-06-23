@@ -34,8 +34,8 @@ void gotoxy(int x, int y)//funcion para mover el cursor y dibujarlo existe en al
 int menu() {
 system("color 05");//hace que el texto de la consola sea mrado
     string opciones[] = {//opciones de el menu 
-        "start exam",
-        "modificar exam",
+        "aplicar examen",
+        "modificar examen",
         "generar examen",
         "Salir"
     };
